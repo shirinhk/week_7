@@ -9,24 +9,30 @@
 
 	// functions go in the middle
 	function swapImages() {
-		//swap out the draggable thumbnail dragImages
-		//Update the bckground image of the drop zone dropcontainer
-		//1. get the imageref attribute from the element we're clicking on
+				//swap out the draggable thumbnail dragImages
+				//Update the bckground image of the drop zone dropcontainer
+				//1. get the imageref attribute from the element we're clicking on
 
-		let imageIndex = this.dataset.imageref;
+				//let imageIndex = this.dataset.imageref;
 				//newImagePath = "images/add/backGround" + imageIndex;
-				newImagePath = `../images/add/backGround${newIndex}.jpg`;
+				//newImagePath = `url(images/dd/backGround${imageIndex}.jpg`;
 
 				//set the backgroung image of the dropZoneContainer
-				dropcontainer.style.backgroundImage = `url(${newImagePath})`;
-		debugger;
+				dropcontainer.style.backgroundImage = `url(images/dd/backGround${this.database.imageref}.jpg`;
+				//debugger;
 	}
 
-	function startDrag() {=}
+	function startDrag() {
+			console.log('dragging ' + this.dataset.piecenum); 
+	}
 
-	function draggedOver (event) {=}
+	function draggedOver (event) {
+			event.preventDefault(); console.log('dragging over drop zone elements');
+	}
 
-	function dropped (event) {=}
+	function dropped (event) {
+			event.preventDefault(); console.log('dropped on the element'); console.log(event.target.id);
+	}
 
 
 	// event handling at the bottom
